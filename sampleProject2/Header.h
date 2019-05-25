@@ -21,7 +21,7 @@ private:
 public:
 	void publicFunction()
 	{
-		cout << "Accessed by everyone";
+		cout << "Accessed by everyone\n";
 		onlyFunction(2);
 	}
 	Box()
@@ -37,7 +37,7 @@ public:
 protected:
 	void protectedFunction()
 	{
-		cout << "Protected Function";
+		cout << "Protected Function\n";
 	}
 
 };
@@ -59,12 +59,12 @@ private:
 
 bottol::bottol()
 {
-	cout << "Bottle Constructor";
+	cout << "Bottle Constructor\n";
 }
 
 bottol::~bottol()
 {
-	cout << "Bottle Destructor";
+	cout << "Bottle Destructor\n";
 }
 
 
@@ -72,6 +72,7 @@ class boxDerived : public Box
 {
 public:
 	boxDerived();
+	void boxDerivedPublic();
 private:
 	void boxDerivedPrivate();
 protected:
@@ -80,15 +81,20 @@ protected:
 
 boxDerived::boxDerived()
 {
-	cout << "BoxDerived constructor";
+	cout << "BoxDerived constructor\n";
 	protectedFunction();
 	
 }
 void boxDerived::boxDerivedPrivate()
 {
-	cout << "BoxDerived Private";
+	cout << "BoxDerived Private\n";
 }
 void boxDerived::boxDerivedProtected()
 {
-	cout << "Box Derived Protected";
+	cout << "Box Derived Protected\n";
+}
+
+void boxDerived::boxDerivedPublic()
+{
+	cout << "Box derived Public\n";
 }
